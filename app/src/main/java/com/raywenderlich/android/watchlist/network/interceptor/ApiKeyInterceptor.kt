@@ -11,7 +11,7 @@ class ApiKeyInterceptor : Interceptor {
         val originalUrl = originalRequest.url
 
         val url = originalUrl.newBuilder()
-                .addQueryParameter(API_KEY_QUERY_PARAMETER_KEY, BuildConfig.THE_MOVIE_DB_API_TOKEN)
+                .addQueryParameter(API_KEY_QUERY_PARAMETER_KEY, BuildConfig.API_KEY)
                 .build()
 
         val request = originalRequest.newBuilder().url(url).build()
